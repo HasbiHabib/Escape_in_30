@@ -44,5 +44,6 @@ public class LevelTimer : MonoBehaviour
     {
         Timer = MaxTime;
         PopupTime.SetTrigger("reset");
+        TimerOn = true;
     }
 }

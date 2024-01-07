@@ -22,9 +22,12 @@ public class ClockManager : MonoBehaviour
 
     public void CheckClock() 
     {
-        if(CurrentHourKey % HourKey == 0 && CurrentMinuteKey % MinuteKey == 0) 
+        if (CurrentHourKey != 0 && CurrentMinuteKey != 0)
         {
-            Debug.Log("win");
+            if (CurrentHourKey % HourKey == 0 && CurrentMinuteKey % MinuteKey == 0)
+            {
+                Debug.Log("win");
+            }
         }
     }
 }

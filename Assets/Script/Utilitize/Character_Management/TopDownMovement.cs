@@ -30,7 +30,6 @@ public class TopDownMovement : MonoBehaviour {
 		if (_gm.paused == false && _gm.OnInteract == false)
 		{
             _input = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
-            //playerAnimation.SetFloat("Run", Movements);
             Movements = _input.normalized.magnitude * _speed;
             Look();
             Move();
@@ -40,6 +39,8 @@ public class TopDownMovement : MonoBehaviour {
 				playerScanner.DetectPlayer(transform, b);
 			}
         }
+
+        playerAnimation.SetFloat("Run", Movements);
     }
 
     private void Look()
